@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.element,
+html {
+    scrollbar-width: none
+}
+
+html::-webkit-scrollbar,
+.element::-webkit-scrollbar {
+    display: none
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+
+/* CONTAINER */
+
+.container {
+    max-width: 100%;
+}
+
+/* BOX SATU */
+
+.container .box.satu {
+    background-color: #111;
+    display: grid;
+    grid-template-areas:
+        'photo about'
+        'wave wave';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: flex-end;
+
+    padding-top: 120px;
+}
+
+.container .box.satu img {
+    max-width: 55%;
+    padding-right: 99px;
+
+    grid-area: photo;
+}
+
+.container .box.satu .about {
+    grid-area: about;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-right: 180px;
+    cursor: default;
+}
+
+.container .box.satu .about h1 {
+    font-size: 62px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.container .box.satu .about h1:hover {
+    color: rgb(151, 151, 151);
+}
+
+.container .box.satu .about p {
+    font-size: 25px;
+    font-weight: 550;
+    text-align: justify;
+}
+
+.container .box.satu .about .button {
+    margin-top: 20px;
+}
+
+.container .box.satu .about .button a {
+    text-decoration: none;
+    color: #111;
+    background-color: #fff;
+
+    border-radius: 7px;
+    padding: 5px 13px;
+    transition: all 0.3s ease;
+}
+
+.container .box.satu .about .button a:hover {
+    color: #fff;
+    background-color: rgb(151, 151, 151);
+}
+
+svg {
+    grid-area: wave;
+}
+
+/* BOX DUA */
+
+.container .box.dua {
+    /* background-color: salmon; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+
+.container .box.dua a {
+    color: #111;
+    font-size: 100px;
+    transition: all 0.3s ease;
+}
+
+.container .box.dua a:hover {
+    color: rgb(151, 151, 151);
+}
+
+.container .box.dua div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .box.dua p {
+    font-size: 35px;
+    font-weight: bold;
+    color: #111;
+    cursor: default;
+}
+
+/* BOX TIGA */
+
+.container .box.tiga {
+    background-color: #111;
+    display: grid;
+    grid-template-areas:
+        'wave wave wave'
+        'project project project'
+        'logo logo logo'
+        'klik klik klik';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 0.2fr 0.6fr 0.2fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.container .box.tiga svg {
+    grid-area: wave;
+}
+
+.container .box.tiga h1 {
+    grid-area: project;
+    margin: 80px 0;
+    font-size: 40px;
+    cursor: default;
+}
+
+.container .box.tiga .icons {
+    grid-area: logo;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1fr);
+    justify-items: center;
+}
+
+.container .box.tiga .icons a {
+    color: #111;
+    font-size: 100px;
+    background-color: #fff;
+    padding: 80px;
+    border-radius: 7px;
+
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.container .box.tiga .icons a:hover {
+    background-color: rgb(151, 151, 151);
+}
+
+.container .box.tiga h3 {
+    grid-area: klik;
+    margin: 80px 0;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 5px 0;
+    color: #111;
+    font-size: 13px;
+    text-align: center;
+}
